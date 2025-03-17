@@ -53,8 +53,9 @@ for (let i = 1; i <= n; i++) {
       primeNum = true;
     } else if (currNum % 2 === 0 || currNum % 3 === 0) {
       primeNum = false;
-    } else { // Got hint from stack Overflow for this part.
-      for (let j = 5; j * j <= currNum; j += 6) {
+    } else {
+      // Got hint from stack Overflow for this part.
+      for (let j = 3; j * j <= currNum; j += 3) {
         if (currNum % j === 0 || (currNum % i) + 2 === 0) {
           primeNum = false;
           break;
