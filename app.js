@@ -79,8 +79,19 @@ const data =
 const separatedLine = data.split("\n");
 
 for (let i = 0; i < separatedLine.length; i++) {
-  let cells = separatedLine[i].split(",");
-  if (cells.length === 4) {
-    console.log(cells[0], cells[1], cells[2], cells[3]);
+  let word = separatedLine[i];
+  let rows = word.split(",");
+  if (rows.length === 4) {
+    console.log(rows[0], rows[1], rows[2], rows[3]);
   }
 }
+
+// // with Try and catch method!
+
+// for(let i = 0; i < separatedLine.length; i++) {
+//     try {
+//         let cells = separatedLine[i]
+//     } catch (error) {
+
+//     }
+// }
