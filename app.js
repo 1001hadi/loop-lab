@@ -38,33 +38,49 @@
 // 2nd Part: Prime Time
 /////////////////////
 
-const n = 10;
+// const n = 10;
 
-for (let i = 1; i <= n; i++) {
-  let currNum = i;
-  //   console.log(currNum);
-  while (true) {
-    currNum++;
-    let primeNum = true;
+// for (let i = 1; i <= n; i++) {
+//   let currNum = i;
+//   //   console.log(currNum);
+//   while (true) {
+//     currNum++;
+//     let primeNum = true;
 
-    if (currNum <= 1) {
-      primeNum = false;
-    } else if (currNum <= 3) {
-      primeNum = true;
-    } else if (currNum % 2 === 0 || currNum % 3 === 0) {
-      primeNum = false;
-    } else {
-      // Got hint from stack Overflow for this part.
-      for (let j = 3; j * j <= currNum; j += 3) {
-        if (currNum % j === 0 || (currNum % i) + 2 === 0) {
-          primeNum = false;
-          break;
-        }
-      }
-    }
-    if (primeNum) {
-      console.log(`${i}\n\ next Prime number is: ${currNum}`);
-      break;
-    }
+//     if (currNum <= 1) {
+//       primeNum = false;
+//     } else if (currNum <= 3) {
+//       primeNum = true;
+//     } else if (currNum % 2 === 0 || currNum % 3 === 0) {
+//       primeNum = false;
+//     } else {
+//       // Got hint from stack Overflow for this part.
+//       for (let j = 3; j * j <= currNum; j += 3) {
+//         if (currNum % j === 0 || (currNum % i) + 2 === 0) {
+//           primeNum = false;
+//           break;
+//         }
+//       }
+//     }
+//     if (primeNum) {
+//       console.log(`${i}\n\ next Prime number is: ${currNum}`);
+//       break;
+//     }
+//   }
+// }
+
+///////////////////////////
+// 3rd Part: Feeling Loopy!
+//////////////////////////
+
+const data =
+  "ID,Name,Occupation,Age\n42,Bruce,Knight,41\n57,Bob,Fry Cook,19\n63,Blaine,Quiz Master,58\n98,Bill,Doctor’s Assistant,26";
+
+const separatedLine = data.split("\n");
+
+for (let i = 0; i < separatedLine.length; i++) {
+  let cells = separatedLine[i].split(",");
+  if (cells.length === 4) {
+    console.log(cells[0], cells[1], cells[2], cells[3]);
   }
 }
